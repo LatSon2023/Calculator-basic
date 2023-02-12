@@ -1,0 +1,88 @@
+:root {
+    --color-bc: #29262c;
+    --color-white: #fff;
+    --color-btn: #d74742;
+    --color-bc-tool: #967c6d;
+    --color-bc-screen: #382325;
+    --color-bc-btn-bottom: #923532;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    font-weight: 700;
+    font-size: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Dosis', sans-serif;
+    background-color: var(--color-bc);
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.tool {
+    width: 100%;
+    height: 400px;
+    padding: 20px;
+    margin: 0 10px;
+    max-width: 400px;
+    border-radius: 10px;
+    background-color: var(--color-bc-tool);
+}
+
+.screen {
+    height: 40px;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: end;
+    color: var(--color-white);
+    background-color: var(--color-bc-screen);
+}
+
+.row {
+    display: flex;
+}
+
+.row:last-child .btn {
+    color: var(--color-white);
+    background-color: var(--color-bc-btn-bottom);
+}
+
+.btn {
+    width: 25%;
+    height: 40px;
+    margin: 10px;
+    display: flex;
+    cursor: default;
+    border-radius: 5px;
+    align-items: center;
+    color: var(--color-btn);
+    justify-content: center;
+    background-color: var(--color-white);
+}
+
+@media screen and (max-width: 400px) {
+    .btn {
+        margin: 10px 5px;
+    }
+    .row {
+        margin: 0 5px;
+    }
+
+    .tool {
+        padding: 10px;
+        height: 380px;
+    }
+}
